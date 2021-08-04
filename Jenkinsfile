@@ -4,6 +4,7 @@ pipeline {
         stage("Stage 1") {
             steps {
                 echo "Hello World!"
+                echo "This is multistages pipeline."
                 echo "We will print all built in environment variable."
             }
         }
