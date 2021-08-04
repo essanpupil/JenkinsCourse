@@ -1,5 +1,5 @@
 pipeline {
-    agent sshagent
+    agent sshjenkinsagent
     stages {
         stage("Stage 1") {
             steps {
