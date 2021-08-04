@@ -1,5 +1,9 @@
 pipeline {
-    agent sshjenkinsagent
+    agent {
+        node {
+            label 'sshjenkinsagent'
+        }
+    }
     stages {
         stage("Stage 1") {
             steps {
