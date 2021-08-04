@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent sshagent
     stages {
         stage("Stage 1") {
             steps {
