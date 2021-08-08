@@ -33,4 +33,13 @@ Vagrant.configure("2") do |config|
       SHELL
   end
 
+  config.vm.define "jenkinsagentdocker" do |agentdocker|
+    agentdocker.vm.box = "generic/ubuntu2004"
+    agentdocker.vm.network "private_network", ip: "192.168.33.13"
+    agentdocker.vm.provision "shell", inline: <<-SHELL
+        apt-get update
+        apt-get install -y openjdk-11-jre
+      SHELL
+  end
+
 end
